@@ -52,13 +52,17 @@ PostgreSQL (если не используется Docker)
 
 Структура проекта
 test-booking/
-├── backend/ # NestJS бэкенд
+├── back/ # NestJS бэкенд
 │ ├── src/
 │ │ ├── auth/ # Модуль аутентификации
-│ │ ├── users/ # Модуль пользователей
-│ │ ├── rooms/ # Модуль комнат
-│ │ ├── bookings/ # Модуль бронирований
-│ │ ├── filters/ # Глобальные фильтры ошибок
+│ │ ├── booking/ # Модуль бронирований
+│ │ ├── config/ # Конфигурации
+│ │ ├── decorators/ # Декораторы
+│ │ ├── pipes/ # Для валидации запроса
+│ │ ├── prisma/ # Модуль prisma
+│ │ ├── room/ # Модуль комнат
+│ │ ├── user/ # Модуль пользователей
+│ │ ├── utils/ # Утилиты
 │ │ ├── app.module.ts
 │ │ └── main.ts
 │ ├── Dockerfile
@@ -68,7 +72,7 @@ test-booking/
 
 1. Запуск с Docker
 
-Склонируйте репозиторий:git clone <repository-url>
+Склонируйте репозиторий:git clone https://github.com/Ruslan543/test-booking
 cd test-booking
 
 Запустите приложение:docker-compose up --build
